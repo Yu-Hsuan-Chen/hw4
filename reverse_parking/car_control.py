@@ -77,23 +77,23 @@ d2 = int(input("d2:"))
 if position == 'left': 
     #goStraight
     if d2 > 0:
-        a1 = d2*2.45
+        a1 = d2*2.44
         s.write("/goStraight/run 50 1 1\n".encode())
     else: #d2 < 0
-        a1 = -d2*2.45
-        s.write("/goStraight/run -50 0.9 1\n".encode())
+        a1 = -d2*2.43
+        s.write("/goStraight/run -50 1 1\n".encode())
     time.sleep(a1)
     s.write("/stop/run \n".encode())
     #goStraight
     s.write("/goStraight/run -50 0.9 1\n".encode())
-    time.sleep(0.7)
+    time.sleep(0.65)
     s.write("/stop/run \n".encode())
     #turn
     s.write("/turn/run -100 -0.3 \n".encode())
-    time.sleep(2.6)
+    time.sleep(2.7)
     s.write("/stop/run \n".encode())
     #goStraight
-    a2 = 2.2+(d1-1)*2.7
+    a2 = 2.2+(d1-1)*2.5
     s.write("/goStraight/run -50 0.9 1\n".encode())
     time.sleep(a2)
     s.write("/stop/run \n".encode())
@@ -139,23 +139,23 @@ elif position == 'front':
 
     #goStraight
     if d2 > 0:
-        a1 = 0.8+(d2-1)*2.9
-        s.write("/goStraight/run -50 0.9 1\n".encode())
+        a1 = 0.9+(d2-1)*2.9
+        s.write("/goStraight/run -50 1 1\n".encode())
     else: 
-        a1 = 1.5-d2*2.45
-        s.write("/goStraight/run -50 0.9 1\n".encode())
+        a1 = 1.1-d2*2.45
+        s.write("/goStraight/run -50 1 1\n".encode())
     time.sleep(a1)
     s.write("/stop/run \n".encode())
     #turn
     if d2 > 0:
         s.write("/turn/run -100 0.3 \n".encode()) 
-        time.sleep(3.4)
+        time.sleep(3.2)
     else:
         s.write("/turn/run -100 -0.3 \n".encode())
         time.sleep(2.9)
     s.write("/stop/run \n".encode())
     #goStraight
-    a2 = 2.4+(d1)*2.7
+    a2 = 2.4+d1*1.6
     s.write("/goStraight/run -50 0.9 1\n".encode())
     time.sleep(a2)
     s.write("/stop/run \n".encode())
