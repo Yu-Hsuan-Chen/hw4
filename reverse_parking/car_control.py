@@ -69,12 +69,12 @@ if len(sys.argv) < 1:
 #     i = 0
 
 
-position = input("poisition:")
+direction = input("direction:")
 d1 = int(input("d1:"))
 d2 = int(input("d2:"))
 
 
-if position == 'left': 
+if direction == 'left': 
     #goStraight
     if d2 > 0:
         a1 = d2*2.44
@@ -98,7 +98,7 @@ if position == 'left':
     time.sleep(a2)
     s.write("/stop/run \n".encode())
 
-elif position == 'right':
+elif direction == 'right':
     #goStraight
     if d2 > 0:
         a1 = (d2-1)*2.45
@@ -122,7 +122,7 @@ elif position == 'right':
     time.sleep(a2)
     s.write("/stop/run \n".encode())
 
-elif position == 'front':
+elif direction == 'front':
     if d1 == 2:
         s.write("/goStraight/run -50 0.9 1\n".encode())
         time.sleep(2.7)
