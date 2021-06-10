@@ -18,6 +18,8 @@
 3. connect the openmv to portable charger
 4. put the car on the line
 5. car will run and follow the line automatically
+6. map:
+![](https://github.com/Yu-Hsuan-Chen/hw4/blob/main/detect_line/IMG_0F083372617B-1.jpeg)
 
 ## Part 3
 1. compile main.cpp
