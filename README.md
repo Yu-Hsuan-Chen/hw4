@@ -23,6 +23,6 @@
 
 ## Part 3
 1. compile main.cpp
-2. copy the main.py to openmv
+2. copy the aprilTag.py to openmv
 3. connect the openmv to portable charger
 4. car will run automatically
